@@ -27,4 +27,9 @@ jobs:
 
     - name: Build Docker image
       run: docker build -t devops-demo app/devops-demo
+      
+    - name: Run health check
+      run: |
+        chmod +x healthcheck.sh
+        ./healthcheck.sh
 
