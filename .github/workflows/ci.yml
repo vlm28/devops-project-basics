@@ -26,4 +26,5 @@ jobs:
       run: echo "No tests yet"
 
     - name: Build Docker image
-      run: docker build -t devops-demo .
+      run: docker build -t devops-demo app/devops-demo
+
