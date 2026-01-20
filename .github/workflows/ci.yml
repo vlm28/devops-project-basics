@@ -30,6 +30,7 @@ jobs:
       
     - name: Run health check
       run: |
+        cd app/devops-demo
         chmod +x healthcheck.sh
         ./healthcheck.sh
 
