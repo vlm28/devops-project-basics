@@ -28,6 +28,11 @@ jobs:
     - name: Build Docker image
       run: docker build -t devops-demo app/devops-demo
       
+    - name: Run container
+      run: |
+        docker run -d -p 3000:3000 --name devops-demo devops-demo
+        sleep 10
+      
     - name: Run health check
       run: |
         cd app/devops-demo
